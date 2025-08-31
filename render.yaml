@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: consulta-dni
+    runtime: docker
+    repo: https://github.com/murrieta2020/Consulta-dni-nombres
+    branch: main
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production

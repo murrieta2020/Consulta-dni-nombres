@@ -1,0 +1,13 @@
+# Dependencias y caches
+node_modules
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+.cache
+.tmp
+
+# Varios
+.git
+.github
+.DS_Store
+*.log
