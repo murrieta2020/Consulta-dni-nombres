@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: dniperu-playwright-scraper
+    env: node
+    plan: free
+    buildCommand: |
+      npm ci
+      npx playwright install --with-deps chromium
+    startCommand: node server.js
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: TARGET_URL
+        value: https://dniperu.com/buscar-dni-por-nombres-y-apellidos/
+      # Opcional: usar un proxy residencial/rotativo si aún recibes bloqueos
+      # - key: PROXY_URL
+      #   value: http://usuario:password@host:puerto
